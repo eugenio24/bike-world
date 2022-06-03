@@ -2,7 +2,7 @@
   "scripts": {
     "start" : "cd BikeWorldServer && npm install && npm run start",
     "build": "cd BikeWorldFrontEnd && npm install --legacy-peer-deps && npm run build",
-    "heroku-postbuild": "cd BikeWorldFrontEnd && npm install && npm run build:prod"
+    "heroku-postbuild": "cd BikeWorldFrontEnd && npm install --legacy-peer-deps && npm run build:prod"
   },
   "dependencies": {
     "express": "^4.18.1"
