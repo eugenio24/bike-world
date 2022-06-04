@@ -3,7 +3,12 @@
 
 name: Node.js CI
 
-#environment: test-env
+
+environment: test-env
+
+env:
+  TOKEN_SECRET: ${{ test-env.TOKEN_SECRET }}
+  DB_URL: ${{ test-env.DB_URL }}
 
 on:
   push:
@@ -13,11 +18,6 @@ on:
 
 jobs:
   tests:
-    environment: test-env
-    
-    env:
-      TOKEN_SECRET: ${{ test-env.TOKEN_SECRET }}
-      DB_URL: ${{ test-env.DB_URL }}
       
     runs-on: ubuntu-latest
 
